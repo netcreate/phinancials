@@ -27,7 +27,7 @@ class Phinancials extends Component {
           To get started, edit index.ios.js
         </Text>
         <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
+          Press Cmd+R to reload your rifle,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
       </View>
