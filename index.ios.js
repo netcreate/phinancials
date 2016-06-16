@@ -9,6 +9,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   View
 } from 'react-native';
 
@@ -16,6 +17,9 @@ class Phinancials extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View>
+          <TextInput placeholder="Hello" style={styles.textInput} />
+        </View>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -48,6 +52,13 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  textInput: {
+    height: 40,
+    width:200,
+    borderColor: 'grey',
+    backgroundColor: 'white',
+    borderWidth: 1
+  }
 });
 
 AppRegistry.registerComponent('Phinancials', () => Phinancials);
