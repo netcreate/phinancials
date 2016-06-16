@@ -21,7 +21,7 @@ class Phinancials extends Component {
           <TextInput placeholder="Hello" style={styles.textInput} />
         </View>
         <Text style={styles.welcome}>
-          Welcome to Foobar Native!
+          Welcome to Boobie Native!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
