@@ -10,8 +10,24 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  View
+  View,
+  TabBarIOS,
+  NavigatorIOS
 } from 'react-native';
+
+/*class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <TabBarIOS>
+          <TabBarIOS.Item title="React Native" selected={true}>
+            <NavigatorIOS initialRoute={{ title: 'React Native' }} />
+          </TabBarIOS.Item>
+        </TabBarIOS>
+      </View>
+    );
+  }
+}*/
 
 class Phinancials extends Component {
   render() {
