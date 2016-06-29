@@ -23,9 +23,6 @@ class Phinancials extends Component {
   _renderWelcomePage() {
     return (
       <View style={styles.container}>
-        <View>
-          <TextInput placeholder="Hello" style={styles.textInput} />
-        </View>
         <Text style={styles.welcome}>
           Welcome to Phinancials!
         </Text>
