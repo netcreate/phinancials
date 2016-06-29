@@ -27,15 +27,27 @@ class Phinancials extends Component {
           <TextInput placeholder="Hello" style={styles.textInput} />
         </View>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to Phinancials!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          The easy-as-hell financials application.
         </Text>
         <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+          Tap "New form" for a new expenses form.
         </Text>
+      </View>
+    );
+  }
+
+  _renderNewForm() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          New expenses form:
+        </Text>
+        <View>
+          <TextInput placeholder="Add expenses..." style={styles.textInput} />
+        </View>
       </View>
     );
   }
@@ -43,8 +55,11 @@ class Phinancials extends Component {
   render() {
     return (
       <TabBarIOS>
-        <TabBarIOS.Item title="React Native" selected={true} icon={{uri: base64Icon, scale: 3}}>
+        <TabBarIOS.Item title="Home" selected={true} icon={{uri: base64Icon, scale: 3}}>
           {this._renderWelcomePage()}
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title="New Form" selected={false} icon={{uri: base64Icon, scale: 3}}>
+          {this._renderNewForm()}
         </TabBarIOS.Item>
       </TabBarIOS>
     );
