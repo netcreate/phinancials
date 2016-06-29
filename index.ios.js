@@ -20,6 +20,10 @@ var base64Icon =
 
 class Phinancials extends Component {
 
+  state = {
+    selectedTab: 'home'
+  }
+
   _renderWelcomePage() {
     return (
       <View style={styles.container}>
@@ -52,10 +56,26 @@ class Phinancials extends Component {
   render() {
     return (
       <TabBarIOS>
-        <TabBarIOS.Item title="Home" selected={true} icon={{uri: base64Icon, scale: 3}}>
+        <TabBarIOS.Item
+            title="Home"
+            selected={this.state.selectedTab === 'home'}
+            icon={{uri: base64Icon, scale: 3}}
+            onPress={() => {
+              this.setState({
+                selectedTab: 'home',
+              });
+            }}>
           {this._renderWelcomePage()}
         </TabBarIOS.Item>
-        <TabBarIOS.Item title="New Form" selected={false} icon={{uri: base64Icon, scale: 3}}>
+        <TabBarIOS.Item
+            title="New Form"
+            selected={this.state.selectedTab === 'newForm'}
+            icon={{uri: base64Icon, scale: 3}}
+            onPress={() => {
+              this.setState({
+                selectedTab: 'newForm',
+              });
+            }}>
           {this._renderNewForm()}
         </TabBarIOS.Item>
       </TabBarIOS>
