@@ -17,6 +17,7 @@ import {
 class Overview extends Component {
   constructor() {
     super();
+    this._renderRow = this._renderRow.bind(this);
 
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
@@ -62,7 +63,7 @@ class Overview extends Component {
   }
 
   _pressRow(rowID: number) {
-
+    alert('lol');
   }
 
   _renderSeperator(sectionID: number, rowID: number, adjacentRowHighlighted: bool) {
