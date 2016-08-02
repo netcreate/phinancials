@@ -63,7 +63,9 @@ class List extends Component {
   }
 
   _pressRow(rowID: number) {
-    alert('lol');
+    this.props.navigator.push({
+      name: 'ListItem', // Matches route.name
+    })
   }
 
   _renderSeperator(sectionID: number, rowID: number, adjacentRowHighlighted: bool) {

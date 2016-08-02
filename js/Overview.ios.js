@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 const List = require('./List');
+const ListItem = require('./ListItem');
 
 class Overview extends Component {
   constructor() {
@@ -16,11 +17,11 @@ class Overview extends Component {
   }
 
   _renderScene(route, navigator) {
-   if(route.name == 'Main') {
-     return <List />
+   if(route.name == 'List') {
+     return <List navigator={navigator} />
    }
-   if(route.name == 'Home') {
-     return <Home navigator={navigator} />
+   if(route.name == 'ListItem') {
+     return <ListItem navigator={navigator} />
    }
   }
 
@@ -28,7 +29,7 @@ class Overview extends Component {
     return (
       <Navigator
         style={{ flex:1 }}
-        initialRoute={{ name: 'Main' }}
+        initialRoute={{ name: 'List' }}
         renderScene={ this._renderScene } />
     )
   }
