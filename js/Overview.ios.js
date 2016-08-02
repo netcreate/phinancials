@@ -82,10 +82,12 @@ class Overview extends Component {
     return (
       <View style={styles.container}>
         <ListView
+          style={styles.listView}
           dataSource={this.state.dataSource}
           renderRow={this._renderRow}
           renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
           renderSeparator={this._renderSeperator}
+          automaticallyAdjustContentInsets={false}
         />
       </View>
     );
@@ -106,17 +108,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    paddingBottom: 60,
+    paddingBottom: 0,
+  },
+  listView: {
+    marginTop: 0,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
     padding: 20,
     backgroundColor: '#F6F6F6',
-  },
-  thumb: {
-    width: 64,
-    height: 64,
   },
   text: {
     flex: 1,
