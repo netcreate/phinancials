@@ -7,10 +7,6 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
   TabBarIOS,
 } from 'react-native';
 

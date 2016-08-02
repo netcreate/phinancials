@@ -6,6 +6,7 @@
 import React, { Component } from 'react';
 import {
   Text,
+  Image,
   StyleSheet,
   View,
 } from 'react-native';
@@ -19,6 +20,8 @@ class ListItem extends Component {
     return (
       <View style={styles.container}>
         <Text>LOL WAT</Text>
+        <Image
+          source={require('../img/GitHub-Mark.png')} />
       </View>
     );
   }
