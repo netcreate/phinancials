@@ -21,13 +21,29 @@ class Overview extends Component {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
     this.state = {
-      dataSource: ds.cloneWithRows(['row 1', 'row 2']),
+      dataSource: ds.cloneWithRows([
+        'row 1',
+        'row 2',
+        'row 3',
+        'row 4',
+        'row 5',
+        'row 6',
+        'row 7',
+        'row 8',
+        'row 9',
+        'row 10',
+        'row 11',
+        'row 12',
+        'row 13',
+        'row 14',
+      ]),
     };
   }
 
   _renderRow(rowData: string, sectionID: number, rowID: number, highlightRow: (sectionID: number, rowID: number) => void) {
     var rowHash = Math.abs(hashCode(rowData));
     // var imgSource = THUMB_URLS[rowHash % THUMB_URLS.length];
+
     return (
       <TouchableHighlight onPress={() => {
           this._pressRow(rowID);
@@ -45,20 +61,8 @@ class Overview extends Component {
     );
   }
 
-  _genRows(pressData: {[key: number]: boolean}): Array<string> {
-    var dataBlob = [];
-    for (var ii = 0; ii < 100; ii++) {
-      var pressedText = pressData[ii] ? ' (pressed)' : '';
-      dataBlob.push('Row ' + ii + pressedText);
-    }
-    return dataBlob;
-  }
-
   _pressRow(rowID: number) {
-    this._pressData[rowID] = !this._pressData[rowID];
-    this.setState({dataSource: this.state.dataSource.cloneWithRows(
-      this._genRows(this._pressData)
-    )});
+
   }
 
   _renderSeperator(sectionID: number, rowID: number, adjacentRowHighlighted: bool) {
@@ -100,14 +104,13 @@ const hashCode = function(str) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    paddingTop: 20,
+    paddingBottom: 60,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
-    padding: 10,
+    padding: 20,
     backgroundColor: '#F6F6F6',
   },
   thumb: {
