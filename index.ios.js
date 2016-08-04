@@ -36,6 +36,17 @@ class Phinancials extends Component {
           <Overview />
         </TabBarIOS.Item>
         <TabBarIOS.Item
+            title="New Budget"
+            selected={this.state.selectedTab === 'newBudget'}
+            icon={{uri: base64Icon, scale: 3}}
+            onPress={() => {
+              this.setState({
+                selectedTab: 'newBudget',
+              });
+            }}>
+            { /* Hier moet nog een NewBudgetForm komen in aparte file */}
+        </TabBarIOS.Item>
+        <TabBarIOS.Item
             title="New Form"
             selected={this.state.selectedTab === 'newForm'}
             icon={{uri: base64Icon, scale: 3}}
