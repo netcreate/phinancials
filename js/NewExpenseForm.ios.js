@@ -19,7 +19,17 @@ class NewExpenseForm extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.label}>
+          New expense:
         </Text>
+          <View>
+            <TextInput placeholder=" How much did you spend?..." style={styles.textInput} />
+          </View>
+        <Text style={styles.label}>
+        Comment:
+        </Text>
+          <View>
+            <TextInput placeholder=" Where did you spend it on?..." style={styles.textInput} />
+          </View>
       </View>
     )
   }
@@ -33,6 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   label: {
+    fontFamily: 'Noteworthy',
+    fontWeight: 'bold',
+    color: '#383899',
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
@@ -43,7 +56,9 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   textInput: {
+    fontFamily: 'Optima',
     height: 40,
+    width:225,
     borderColor: 'grey',
     backgroundColor: 'white',
     borderWidth: 1
