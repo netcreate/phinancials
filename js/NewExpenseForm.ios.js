@@ -19,11 +19,7 @@ class NewExpenseForm extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.label}>
-          New expenses form:
         </Text>
-        <View>
-          <TextInput placeholder="Add expenses..." style={styles.textInput} />
-        </View>
       </View>
     )
   }
@@ -48,7 +44,6 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 40,
-    width:200,
     borderColor: 'grey',
     backgroundColor: 'white',
     borderWidth: 1
